@@ -2,7 +2,7 @@ import MainWindow as m
 import Web as w
 import Cert as c
 import CertDetails as cd
-import DBKeyWorker as d
+import DBWorker as d
 from PyQt5.QtWidgets import QTableWidgetItem
 import HTMLWorker as h
 
@@ -87,7 +87,7 @@ class CertWindow(c.QtWidgets.QMainWindow):
         self.ui = c.Ui_Form()
         self.ui.setupUi(self)
         self.det_info = CertDetailWindow()
-        self.worker = d.DBKeyWorker('192.168.200.100', 'App', '12345')
+        self.worker = d.DBWorker('config.xml')
         self.save_data()
         self.convert_data()
         self.ui.pushButton.clicked.connect(self.on_click)
@@ -108,7 +108,8 @@ class CertWindow(c.QtWidgets.QMainWindow):
             self.browser_exists = 0
 
     def save_data(self):
-        self.data = self.worker.read_certs()
+        self.worker.init_keys_connection()
+        self.data = self.worker.get_key()
 
     def convert_data(self):
         storage = dict()
@@ -118,10 +119,6 @@ class CertWindow(c.QtWidgets.QMainWindow):
                 storage[i] = [[s for s in str(cert[0]).split('\n') if 'Subject:' in s][0].strip(), cert[0]]
                 i = i + 1
         self.data = storage
-
-
-
-
 
 
 # Основное окно программы
