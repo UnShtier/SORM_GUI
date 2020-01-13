@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+  <key_database_ip>192.168.200.100</key_database_ip>
+  <key_database_login>App</key_database_login>
+  <key_database_password>12345</key_database_password>
+  <traffic_database_ip>192.168.200.100</traffic_database_ip>
+  <traffic_database_login>App</traffic_database_login>
+  <traffic_database_password>12345</traffic_database_password>
+</params>

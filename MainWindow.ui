@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>359</width>
-    <height>303</height>
+    <width>734</width>
+    <height>424</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -16,53 +16,208 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>734</width>
+    <height>424</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>734</width>
+    <height>424</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>734</width>
+    <height>424</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Пуль управления</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="browse_html">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>220</y>
-      <width>151</width>
-      <height>41</height>
+      <x>10</x>
+      <y>122</y>
+      <width>711</width>
+      <height>281</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Отобразить страницу</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="1">
+      <widget class="QDateTimeEdit" name="begin_date"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Начало периода</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateTimeEdit" name="end_date"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="browse_html">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Отобразить страницу</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Конец периода</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QTextBrowser" name="cert_status">
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>IP адрес клиента</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="browse_cert">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Отобразить сертификат</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="client_ip"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>IP адрес сервера</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="server_ip"/>
+     </item>
+    </layout>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>230</y>
-      <width>160</width>
-      <height>22</height>
+      <x>10</x>
+      <y>10</y>
+      <width>391</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="1">
+      <widget class="QLabel" name="inter_status">
+       <property name="text">
+        <string>Online</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Статус сервера</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Статус соединения с БД</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="db_status">
+       <property name="text">
+        <string>Online</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="browse_cert">
+   <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>170</y>
-      <width>151</width>
-      <height>41</height>
+      <x>410</x>
+      <y>10</y>
+      <width>311</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Отобразить сертификат</string>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
     </property>
    </widget>
   </widget>
